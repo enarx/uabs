@@ -1,0 +1,14 @@
+[package]
+name = "uabs"
+version = "1.0.0"
+authors = ["Nathaniel McCallum <npmccallum@redhat.com>"]
+keywords = ["abs", "unsigned", "absolute", "value"]
+repository = "https://github.com/psilocybin/uabs"
+description = "Absolute value function that returns an unsigned integer"
+documentation = "https://docs.rs/uabs"
+license = "Apache-2.0"
+readme = "README.md"
+build = "build.rs"
+
+[dependencies]
+signrel = "1.0.0"
