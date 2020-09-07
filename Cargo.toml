@@ -19,4 +19,4 @@ is-it-maintained-issue-resolution = { repository = "enarx/uabs" }
 is-it-maintained-open-issues = { repository = "enarx/uabs" }
 
 [dependencies]
-signrel = "1.0.0"
+signrel = "2.0"
