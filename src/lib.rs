@@ -71,7 +71,4 @@ macro_rules! uabs_impl {
     )
 }
 
-uabs_impl! { isize:usize i64:u64 i32:u32 i16:u16 i8:u8 }
-
-#[cfg(has_i128)]
-uabs_impl! { i128:u128 }
+uabs_impl! { isize:usize i128:u128 i64:u64 i32:u32 i16:u16 i8:u8 }
