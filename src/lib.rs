@@ -16,9 +16,9 @@
 
 use signrel::SignRel;
 
-/// Trait exposing the `uabs()` operation.
+/// The unsigned absolute value operation
 pub trait Uabs: SignRel {
-    /// Calculate the absolute value as an unsigned integer.
+    /// Calculate the absolute value as the unsigned equivalent
     fn uabs(self) -> Self::Unsigned;
 }
 
