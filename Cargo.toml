@@ -1,6 +1,6 @@
 [package]
 name = "uabs"
-version = "2.0.0"
+version = "3.0.0"
 authors = ["Nathaniel McCallum <npmccallum@redhat.com>"]
 keywords = ["abs", "unsigned", "absolute", "value"]
 repository = "https://github.com/enarx/uabs"
