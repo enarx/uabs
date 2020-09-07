@@ -2,7 +2,15 @@
 
 //! This crate provides the `UnsignedAbs` trait containing a function `uabs()`
 //! which calculates the absolute value of the input and returns it as an
-//! unsigned integer of the same size as the input.
+//! unsigned integer of the same size as the input. For example:
+//!
+//! ```rust
+//! use uabs::Uabs;
+//!
+//! let x: i8 = -128;
+//! let y: u8 = x.uabs();
+//! assert_eq!(y, 128);
+//! ```
 
 #![no_std]
 
