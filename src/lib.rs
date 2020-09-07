@@ -9,7 +9,7 @@
 use signrel::SignRel;
 
 /// Trait exposing the `uabs()` operation.
-pub trait UnsignedAbs: SignRel {
+pub trait Uabs: SignRel {
     /// Calculate the absolute value as an unsigned integer.
     fn uabs(self) -> Self::Unsigned;
 }
@@ -17,7 +17,7 @@ pub trait UnsignedAbs: SignRel {
 macro_rules! uabs_impl {
     ($($s:ident:$u:ident)*) => (
         $(
-            impl UnsignedAbs for $s {
+            impl Uabs for $s {
                 #[inline]
                 fn uabs(self) -> $u {
                     use core::$s::MIN;
@@ -32,7 +32,7 @@ macro_rules! uabs_impl {
             #[cfg(test)]
             mod $s {
                 use core::$s::{MAX, MIN};
-                use super::UnsignedAbs;
+                use super::Uabs;
 
                 #[test]
                 fn max() {
@@ -45,7 +45,7 @@ macro_rules! uabs_impl {
                 }
             }
 
-            impl UnsignedAbs for $u {
+            impl Uabs for $u {
                 #[inline]
                 fn uabs(self) -> $u {
                     self
@@ -55,7 +55,7 @@ macro_rules! uabs_impl {
             #[cfg(test)]
             mod $u {
                 use core::$u::{MAX, MIN};
-                use super::UnsignedAbs;
+                use super::Uabs;
 
                 #[test]
                 fn max() {
