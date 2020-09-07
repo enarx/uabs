@@ -4,6 +4,8 @@
 //! which calculates the absolute value of the input and returns it as an
 //! unsigned integer of the same size as the input.
 
+#![no_std]
+
 extern crate signrel;
 
 use signrel::SignRel;
@@ -20,7 +22,7 @@ macro_rules! uabs_impl {
             impl UnsignedAbs for $s {
                 #[inline]
                 fn uabs(self) -> $u {
-                    use std::$s::MIN;
+                    use core::$s::MIN;
 
                     match self {
                         MIN => self as $u,
@@ -31,7 +33,7 @@ macro_rules! uabs_impl {
 
             #[cfg(test)]
             mod $s {
-                use std::$s::{MAX, MIN};
+                use core::$s::{MAX, MIN};
                 use super::UnsignedAbs;
 
                 #[test]
@@ -54,7 +56,7 @@ macro_rules! uabs_impl {
 
             #[cfg(test)]
             mod $u {
-                use std::$u::{MAX, MIN};
+                use core::$u::{MAX, MIN};
                 use super::UnsignedAbs;
 
                 #[test]
