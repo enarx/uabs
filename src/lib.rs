@@ -13,6 +13,8 @@
 //! ```
 
 #![no_std]
+#![deny(clippy::all)]
+#![deny(missing_docs)]
 
 use signrel::SignRel;
 
