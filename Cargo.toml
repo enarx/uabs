@@ -10,5 +10,13 @@ license = "Apache-2.0"
 readme = "README.md"
 edition = "2018"
 
+[badges]
+# See https://doc.rust-lang.org/cargo/reference/manifest.html#the-badges-section
+github = { repository = "enarx/uabs", workflow = "test" }
+#github = { repository = "enarx/uabs", workflow = "lint" }
+maintenance = { status = "actively-developed" }
+is-it-maintained-issue-resolution = { repository = "enarx/uabs" }
+is-it-maintained-open-issues = { repository = "enarx/uabs" }
+
 [dependencies]
 signrel = "1.0.0"
