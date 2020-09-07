@@ -8,6 +8,7 @@ description = "Absolute value function that returns an unsigned integer"
 documentation = "https://docs.rs/uabs"
 license = "Apache-2.0"
 readme = "README.md"
+edition = "2018"
 
 [dependencies]
 signrel = "1.0.0"

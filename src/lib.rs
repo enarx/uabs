@@ -6,8 +6,6 @@
 
 #![no_std]
 
-extern crate signrel;
-
 use signrel::SignRel;
 
 /// Trait exposing the `uabs()` operation.
