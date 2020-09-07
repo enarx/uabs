@@ -1,14 +1,20 @@
-[![Build Status](https://travis-ci.org/psilocybin/uabs.svg?branch=master)](https://travis-ci.org/psilocybin/uabs)
-![Rust Version 1.4+](https://img.shields.io/badge/rustc-v1.4%2B-blue.svg)
-[![Crate](https://img.shields.io/crates/v/uabs.svg)](https://crates.io/crates/uabs)
-[![Docs](https://docs.rs/uabs/badge.svg)](https://docs.rs/uabs)
+[![Workflow Status](https://github.com/enarx/uabs/workflows/test/badge.svg)](https://github.com/enarx/uabs/actions?query=workflow%3A%22test%22)
+[![Average time to resolve an issue](https://isitmaintained.com/badge/resolution/enarx/uabs.svg)](https://isitmaintained.com/project/enarx/uabs "Average time to resolve an issue")
+[![Percentage of issues still open](https://isitmaintained.com/badge/open/enarx/uabs.svg)](https://isitmaintained.com/project/enarx/uabs "Percentage of issues still open")
+![Maintenance](https://img.shields.io/badge/maintenance-activly--developed-brightgreen.svg)
 
-This crate provides the `UnsignedAbs` trait, as well as implementations of it
-for the built-in integer types. This trait infallibily calculates the absolute
-value of an integer returned as the corresponding unsigned integer.
+# uabs
 
-# Install
+This crate provides the `UnsignedAbs` trait containing a function `uabs()`
+which calculates the absolute value of the input and returns it as an
+unsigned integer of the same size as the input. For example:
 
-Run this command:
+```rust
+use uabs::Uabs;
 
-    $ cargo add uabs
+let x: i8 = -128;
+let y: u8 = x.uabs();
+assert_eq!(y, 128);
+```
+
+License: Apache-2.0
